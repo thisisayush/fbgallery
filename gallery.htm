@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="fbGallery.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+    </head>
+    <body>
+        <div id="mainContainer">
+        </div>
+    </body>
+    <script src = "js/jquery.js"></script>
+    <!--<script src = "bootstrap.min.js"></script>-->
+    <script src = "fbGallery.js"></script>
+    <script>
+        var appId = '296257484143696';
+        var pageId="681600118668694";
+        var excludedAlbums = ["681601632001876","681600575335315"];
+        var accessToken = '296257484143696|5fc04aadcc6fc9dd97a8d6f476148e81';   
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : appId,
+                xfbml      : true,
+                version    : 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+            $("#mainContainer").fbGallery({
+                accessToken: accessToken,
+                excludedAlbums: excludedAlbums,
+                pageId: pageId
+            });
+       };
+       (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <style>
+        body,html,#mainContainer{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</html>
