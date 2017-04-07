@@ -136,7 +136,7 @@ $(document).on("albumsLoaded",function(){
         var propWidth = contentBoxWidth;
         lightbox.find(".content").height(contentBoxHeight);
         lightbox.find(".content").width(lightbox.find(".content img").width());
-        $("#lightbox .closeBtn, #lightbox .wrapper").click(function(e){
+        $("#lightbox .closeBtn").click(function(e){
             e.preventDefault();
             lightbox.fadeOut().delay(1500).remove();
         });
