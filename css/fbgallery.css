@@ -91,6 +91,8 @@
     margin: 5px;
     height: 250px;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    background-image: url('loader.gif');
+    background-size: cover;
 }
 @media all and (max-width:768px){
     #fbGalleryContainer .photosContainer .imageBox{
@@ -116,6 +118,8 @@
     height: 100%;
     background-size: cover; 
     transition: all 0.5s;
+    background-repeat: no-repeat;
+
 }
 #fbGalleryContainer .photosContainer .imageBox:hover a>div,
 #fbGalleryContainer .photosContainer .imageBox:active a>div,
