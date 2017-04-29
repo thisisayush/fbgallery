@@ -81,8 +81,8 @@
                 callTrigger = setInterval(function(){
                     /** Set Interval to check every 1 second if all photos have been retrieved */
                     if(counter==counter2){      
-                        $(document).trigger("albumsLoaded");    /** Trigger Event **/
                         clearInterval(callTrigger);     /** Stop The Interval **/  
+                        $(document).trigger("albumsLoaded");    /** Trigger Event **/
                     }
                 },1000);
             }
@@ -99,14 +99,14 @@
                 });
             }
         });
-        var grid = $(".photosContainer").masonry({
+        var grid = $("#fbGalleryContainer .photosContainer").masonry({
             itemSelector: '.imageBox',
             coloumnWidth: '.grid-sizer',
             percentPosition: true,
             gutter:4
         });
-        $(".photosContainer").each(function(e){
-            $(this).find("img").load(function(){ 
+        $("#fbGalleryContainer .photosContainer").each(function(e){
+            $(this).find("img").on('load',function(){ 
                 $(this).fadeIn();
                 grid.masonry('layout');
             });
