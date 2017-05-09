@@ -1,5 +1,10 @@
 # fbGallery: A Responsive Facebook Gallery jQuery Plugin
-Display Images from your Facebook Page in a nice Gallery using jQuery.
+Display Images from your Facebook Page in a nice Masonry Grid with a lightbox using jQuery.
+
+- Allow users to view photo on facebook using "View on Facebook" Button
+- Album Headings redirects to Facebook Albums
+- Fully Automated. Just pass the container, pageId and App Id and plugin will do the rest.
+- Automatic resizes according to container
 
 ## Initial Setup
 ### Include jQuery Script
@@ -18,6 +23,13 @@ Display Images from your Facebook Page in a nice Gallery using jQuery.
 
 ```html
 <link rel="stylesheet" href="/path/to/fbgallery.css" />
+```
+
+### Include masonry.pkgd.min.js
+- Add before including fbgallery.js
+
+```
+<script src="/path/to/masonry.pkgd.js"></script>
 ```
 
 ### Include fbgallery.js file 
